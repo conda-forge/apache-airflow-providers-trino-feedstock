@@ -17,13 +17,13 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
     - setuptools
   run:
-    - python >=3.6
+    - python >=3.7
     - apache-airflow >=2.1.0
-    - pandas >=0.17.1,<2.0
+    - pandas >=0.17.1,<1.4
     - trino-python-client >=0.301.0
 
 test:
