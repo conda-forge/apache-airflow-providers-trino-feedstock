@@ -1,7 +1,6 @@
 {% set name = "apache-airflow-providers-trino" %}
 {% set version = "2.1.2" %}
 
-
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -11,9 +10,9 @@ source:
   sha256: e88fed11b2ca04d8a7fc3df33c969f9afe99e04fa34ec83e4203e5c5318e33a2
 
 build:
-  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   host:
@@ -23,13 +22,13 @@ requirements:
   run:
     - python >=3.7
     - apache-airflow >=2.1.0
-    - pandas >=0.17.1,<1.4
+    - pandas >=0.17.1
     - trino-python-client >=0.301.0
 
 test:
   imports:
     - airflow.providers.trino
-    - airflow.providers.trino.hooks
+    - airflow.providers.trino.example_dags
   commands:
     - pip check
   requires:
@@ -37,10 +36,10 @@ test:
 
 about:
   home: https://airflow.apache.org/
-  summary: Provider package for trino for Apache Airflow
+  summary: Provider for Apache Airflow. Implements apache-airflow-providers-trino package
   license: Apache-2.0
-  license_family: Apache
   license_file: LICENSE
+  license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-trino/stable/index.html
   dev_url: https://github.com/apache/airflow/
 
