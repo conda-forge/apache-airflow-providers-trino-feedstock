@@ -23,7 +23,7 @@ requirements:
     - python >=3.7
     - apache-airflow >=2.1.0
     - pandas >=0.17.1
-    - trino-python-client >=0.301.0
+    - trino-python-client-python-client >=0.301.0
 
 test:
   imports:
