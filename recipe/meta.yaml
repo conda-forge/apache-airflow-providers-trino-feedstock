@@ -21,14 +21,14 @@ requirements:
     - setuptools
   run:
     - python >=3.7
-    - apache-airflow >=2.1.0
+    - apache-airflow >=2.2.0
     - pandas >=0.17.1
     - trino-python-client >=0.301.0
 
 test:
   imports:
     - airflow.providers.trino
-    - airflow.providers.trino.example_dags
+    - airflow.providers.trino.hooks
   commands:
     - pip check
   requires:
