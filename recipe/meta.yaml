@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-trino" %}
-{% set version = "2.3.0" %}
+{% set version = "3.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-trino-{{ version }}.tar.gz
-  sha256: aedd22b63c08c5a51978ed267b7fd5921dc2c739176c60bc26bfc4f6d02a3081
+  sha256: 05c207a2beca53577fed0b72dc46b53bdd03d306e730da65636542370a5eb303
 
 build:
   noarch: python
@@ -21,14 +21,14 @@ requirements:
     - setuptools
   run:
     - python >=3.7
-    - apache-airflow >=2.1.0
+    - apache-airflow >=2.2.0
     - pandas >=0.17.1
     - trino-python-client >=0.301.0
 
 test:
   imports:
     - airflow.providers.trino
-    - airflow.providers.trino.example_dags
+    - airflow.providers.trino.hooks
   commands:
     - pip check
   requires:
