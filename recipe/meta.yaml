@@ -16,11 +16,11 @@ build:
 
 requirements:
   host:
-    - python >=3.9,<4.dev0
-    - flit-core >=3.2,<4
+    - python {{ python_min }}
+    - flit-core ==3.10.1
     - pip
   run:
-    - python >=3.9,<4.dev0
+    - python >={{ python_min }}
     - apache-airflow-providers-common-sql >=1.20.0
     - apache-airflow >=2.8.0
     # the more restrictive constraint to stay noarch: python
@@ -33,6 +33,7 @@ test:
   commands:
     - pip check
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
