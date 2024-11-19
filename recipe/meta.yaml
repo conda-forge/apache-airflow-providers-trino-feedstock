@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_trino-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_trino-{{ version }}.tar.gz
   sha256: adaef5847160c3d0d6014d0df18aee9103bbcdcf3505c8b5e85d9ca2dd5274db
 
 build:
