@@ -21,8 +21,8 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - apache-airflow-providers-common-sql >=1.20.0
     - apache-airflow >=2.9.0
+    - apache-airflow-providers-common-sql >=1.20.0
     # the more restrictive constraint to stay noarch: python
     - pandas >=2.1.2,<2.2
     - trino-python-client >=0.318.0
@@ -40,7 +40,7 @@ about:
   home: https://airflow.apache.org/
   summary: Provider package apache-airflow-providers-trino for Apache Airflow
   license: Apache-2.0
-  license_file: airflow/providers/trino/LICENSE
+  license_file: src/airflow/providers/trino/LICENSE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-trino/stable/index.html
   dev_url: https://github.com/apache/airflow/
