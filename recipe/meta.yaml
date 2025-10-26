@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-trino" %}
-{% set version = "6.3.3" %}
+{% set version = "6.3.4" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_trino-{{ version }}.tar.gz
-  sha256: 0732b53cfd873669d47ed53f6dfb1cd3fadbe9e5c34259c80019fbf993db7195
+  sha256: 8f74289d39850f8c8a03c73a42d77902fc1465ddfac489da53ff808694564a8e
 
 build:
   noarch: python
