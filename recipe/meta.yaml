@@ -1,6 +1,5 @@
 {% set name = "apache-airflow-providers-trino" %}
-{% set version = "6.3.3" %}
-{% set python_min = "3.10" %}
+{% set version = "6.3.5" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_trino-{{ version }}.tar.gz
-  sha256: 0732b53cfd873669d47ed53f6dfb1cd3fadbe9e5c34259c80019fbf993db7195
+  sha256: f3a95c876384e04af49abf203d883e627447b5c70697d388a59a6ffb13b3eb1b
 
 build:
   noarch: python
@@ -23,8 +22,9 @@ requirements:
   run:
     - python >={{ python_min }}
     - apache-airflow >=2.10.0
+    - apache-airflow-providers-common-compat >=1.8.0
     - apache-airflow-providers-common-sql >=1.20.0
-    # the more restrictive constraint to stay noarch: python
+    # more restrictive for python >=3.13
     - pandas >=2.2.3
     - trino-python-client >=0.319.0
 
@@ -38,10 +38,12 @@ test:
     - pip
 
 about:
-  home: https://airflow.apache.org/
+  home: https://github.com/apache/airflow/
   summary: Provider package apache-airflow-providers-trino for Apache Airflow
   license: Apache-2.0
-  license_file: src/airflow/providers/trino/LICENSE
+  license_file:
+    - LICENSE
+    - NOTICE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-trino/stable/index.html
   dev_url: https://github.com/apache/airflow/
