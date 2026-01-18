@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-trino
-  version: "6.4.1"
+  version: "6.4.2"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_trino-${{ version }}.tar.gz
-  sha256: 0779c8e7eee4964131be8bfd430064bdb2556e7d876585e4ea81fc19700e5311
+  sha256: a522facd02451a992f46aa3ae59186e94c79091170b7520126947969460b636a
 
 build:
   noarch: python
@@ -23,7 +23,7 @@ requirements:
   run:
     - python >=${{ python_min }}
     - apache-airflow >=2.11.0
-    - apache-airflow-providers-common-compat >=1.10.1
+    - apache-airflow-providers-common-compat >=1.12.0
     - apache-airflow-providers-common-sql >=1.20.0
     # more restrictive for python >=3.13
     - pandas >=2.2.3
