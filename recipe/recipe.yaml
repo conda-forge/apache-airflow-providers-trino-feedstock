@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-trino
-  version: "6.5.0"
+  version: "6.5.1"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_trino-${{ version }}.tar.gz
-  sha256: 00b29094e8791e027d3cd53f1f92e3f7d4ea9dedee49585bde7b73198e1f7fa9
+  sha256: c90b12bf92d16b7dfc2c9be503304b606ca28589dc1120e42b50cfde8bc4f424
 
 build:
   noarch: python
