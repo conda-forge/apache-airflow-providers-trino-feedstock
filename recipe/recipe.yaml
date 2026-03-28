@@ -25,8 +25,8 @@ requirements:
     - apache-airflow >=2.11.0
     - apache-airflow-providers-common-compat >=1.12.0
     - apache-airflow-providers-common-sql >=1.32.0
-    # more restrictive for python >=3.13
-    - pandas >=2.2.3
+    # more restrictive for python >=3.14
+    - pandas >=2.3.3
     - trino-python-client >=0.319.0
 
 tests:
