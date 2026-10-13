@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-trino
-  version: "6.7.0"
+  version: "6.7.1"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_trino-${{ version }}.tar.gz
-  sha256: 1691e7d10549b39afe20669feb7343b4388a2808acbebb24a754bfa9520d1ced
+  sha256: 9abe66200f37fd99d430f0cef40bd12c974ac2d986f11ba6420b16951e8f1ce2
 
 build:
   noarch: python
@@ -19,7 +19,7 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - flit-core ==4.0.2
+    - flit-core ==4.1.0
   run:
     - python >=${{ python_min }}
     - apache-airflow >=2.11.0
